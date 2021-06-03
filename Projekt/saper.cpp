@@ -6,17 +6,17 @@
 
 using namespace std;
 
-void odkryj_kom(int, int);  /// odkryj_koms a cell with given coordinates
+void odkryj_kom(int, int);
 void pozycja_miny();
-void numer_kom(); //increases the number of a cell with 1
-void stworz_tablice(); //creates the game tablica
-void otwieranie(); // opens a cell
+void numer_kom();
+void stworz_tablice();
+void otwieranie();
 void gra();
-void wyswietl_tablice(char); // prints the game tablica
+void wyswietl_tablice(char);
 
-char tablica[10][10]; //the game tablica visible ot the player
-char tablica_pozycja_miny[10][10]; //tablica with the positions of the mines and the number of each cell
-char symbol; //the input symbol, it can be 'o' or f'
+char tablica[10][10];
+char tablica_pozycja_miny[10][10];
+char symbol;
 int liczba_flag=0;
 int miny_flagi=0;
 bool koniec_gry_przegrana=false;
@@ -25,8 +25,11 @@ time_t czas_gry;
 
 void numer_kom(int i,int j)
 {
-if(i>=0&&i<10&&j>=0&&j<10&&tablica_pozycja_miny[i][j]!='X')
-tablica_pozycja_miny[i][j]++;
+    if(i>=0&&i<10&&j>=0&&j<10&&tablica_pozycja_miny[i][j]!='X')
+    {
+        tablica_pozycja_miny[i][j]++;
+    }
+
 }
 
 void pozycja_miny()
@@ -71,6 +74,7 @@ void wyswietl_tablice(char arr[10][10])
 {
     cout<<"    ";
     for(int i=0;i<10;i++)
+
         cout<<setw(3)<<i;
 
     cout<<endl<<"  ";
